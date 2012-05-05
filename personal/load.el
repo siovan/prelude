@@ -6,6 +6,11 @@
                 display-time-24hr-format nil)
              (display-time)
 (setq-default line-spacing 7)
+(set-default-font "Consolas-13")
+(set-fringe-style '(40 . 40))
+(setq global-hl-line-mode nil)
+(load-theme 'inkpot)
+(setq global-undo-tree-mode 1)
 
 ;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
