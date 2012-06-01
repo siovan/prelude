@@ -22,17 +22,23 @@
 (define-key evil-motion-state-map "gs" 'ispell-word)
 (define-key evil-motion-state-map "Q" 'transpose-chars)
 (define-key evil-motion-state-map "Q" 'transpose-chars)
+(define-key evil-motion-state-map "\C-r" 'undo-tree-redo)
 ; keybindings with leaders
+; these have big problems because they make the ; unavailable
 (define-key evil-normal-state-map ";b" 'ido-switch-buffer)
 (define-key evil-visual-state-map ";;" 'comment-or-uncomment-region)
 (define-key dired-mode-map "j" 'dired-next-line)
 (define-key dired-mode-map "k" 'dired-prev-line)
 
-(defun personal-reftex-keys ()
+(defun personal-reftex-toc-keys ()
   (interactive)
 (define-key reftex-toc-map "j" 'reftex-toc-next)
 (define-key reftex-toc-map "k" 'reftex-toc-previous))
-(add-hook 'reftex-toc-mode-hook 'personal-reftex-keys)
+(add-hook 'reftex-toc-mode-hook 'personal-reftex-toc-keys)
+;; (defun personal-reftex-keys ()
+;;   (interactive)
+;;   (define-key evil-motion-state-map ";t" 'reftex-toc))
+;; (add-hook 'reftex-mode-hook 'personal-reftex-keys)
  
 ;; (setq evil-leader/leader ","
 ;;       evil-leader/in-all-states t)

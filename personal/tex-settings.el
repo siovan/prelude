@@ -40,7 +40,7 @@
 ;(add-hook 'find-file-hook 'TeX-fold-buffer t)
 (setq TeX-command-default "XeLaTeX")
 (setq TeX-save-query nil)
-(setq TeX-show-compilation t)
+(setq TeX-show-compilation nil)
 ))
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode

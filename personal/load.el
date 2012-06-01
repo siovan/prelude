@@ -11,6 +11,10 @@
 (setq global-hl-line-mode nil)
 (load-theme 'inkpot)
 (setq global-undo-tree-mode 1)
+(setq sentence-end-double-space nil)
+
+;; disabled auto-fill mode in text-mode and all related modes; don't need it (and it's a pain in the butt) with visual-line-mode
+(add-hook 'text-mode-hook 'turn-off-auto-fill)
 
 ;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
